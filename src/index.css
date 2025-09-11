@@ -1,0 +1,50 @@
+:root{
+    --color-blue: #0B5294;
+    --color-blue-dark: #083157;
+
+    --color-white: #fff;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    padding-inline: 1.302vw;
+}
+
+h1,h2{
+    font-weight: 700;
+    height: 7.656vw;
+}
+
+h1,h2, h3,p,span{
+    color: var(--color-blue);
+}
+
+h1{
+    font-size: 6.677vw;
+}
+
+h2{
+    font-size: 3.339vw;
+}
+
+h3{
+    font-size: 3.339vw;
+    font-weight: 500;
+}
+
+p,span{
+    font-size: 1.25vw;
+}

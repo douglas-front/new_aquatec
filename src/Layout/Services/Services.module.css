@@ -1,0 +1,55 @@
+.services{
+    overflow: hidden;
+}
+.circle{
+    width: 1.771vw;
+    height: 1.771vw;
+
+    border-radius: 50%;
+    background-color: var(--color-blue);
+
+}
+
+.services h1{
+    display: flex;
+    align-items: center;
+    gap: 0.729vw;
+}
+
+.line{
+    width: 100%;
+    height: 0.05vw;
+    background-color: var(--color-blue);
+
+    margin-top: 7.031vw;
+}
+
+.wrapper{
+    margin-top: 1.979vw;
+    display: flex;
+    gap: 0.421vw;
+}
+
+.card{
+    cursor: pointer;
+    flex-shrink: 0;
+
+    width: 32.813vw;
+    height: 38.906vw;
+    border: 0.1vw solid var(--color-blue);
+    border-radius: 0.781vw;
+
+    padding: 0.938vw 0 0 0.938vw;
+}
+
+.card span{
+    font-weight: 900;
+}
+
+.card h3{
+    margin-top: 1.51vw;
+}
+
+.card p{
+    margin-top: 24.271vw;
+}

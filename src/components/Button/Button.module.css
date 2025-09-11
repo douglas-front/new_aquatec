@@ -1,0 +1,29 @@
+.button{
+
+    display: flex;
+    align-items: center;
+    gap: 1.302vw;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    width: 27.656vw;
+    height: 3.177vw;
+    padding-inline: 0.99vw;
+
+    border: none;
+    border-radius: 0.521vw;
+
+    background-color: var(--color-blue);
+
+    font-size: 1.042vw;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.line{
+    width: 13.438vw;
+    background-color: var(--color-white);
+    height: 0.15vw;
+}

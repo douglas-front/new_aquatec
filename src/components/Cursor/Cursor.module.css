@@ -1,0 +1,45 @@
+.cursorBorder{
+    width: 3.646vw;
+    height: 3.646vw;
+
+    border-radius: 50%;
+
+    border: 0.1vw solid var(--color-blue);
+
+    background-color: transparent;
+}
+
+.cursorCircle{
+
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    width: 1.406vw;
+    height: 1.406vw;
+
+    border-radius: 50%;
+
+    background-color: var(--color-blue);
+}
+
+.cursorBorder,
+.cursorCircle{
+
+    pointer-events: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+}
+
+.cursorCircle span{
+    transform: translateX(-100%);
+    font-weight: 500;
+    color: var(--color-blue);
+
+}
