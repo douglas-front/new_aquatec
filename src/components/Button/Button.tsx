@@ -1,49 +1,7 @@
-import gsap from 'gsap'
 import styles from './Button.module.css'
+import { onMouseEnterInButton, onMouseLeaveInButton } from '../../services/AnimateCursor.service'
 
 export default function Button() {
-
-    const onMouseEnterInButton = () => {
-
-        gsap.killTweensOf("#cursorCircle")
-        gsap.killTweensOf("#cursorCircle span")
-
-        gsap.to("#cursorCircle", {
-            backgroundColor: 'var(--color-white)',
-            width: '8.646vw',
-            height: '8.646vw',
-            border: '0.1vw solid var(--color-blue)',
-            duration: 0.4,
-            ease: "power2.inOut",
-        })
-
-        gsap.to("#cursorCircle span", {
-            x: 0,
-            duration: 0.7,
-            ease: "power2.inOut",
-        })
-
-    }
-    const onMouseLeaveInButton = () => {
-
-        gsap.to("#cursorCircle", {
-            backgroundColor: 'var(--color-blue)',
-            width: ' 1.406vw',
-            height: ' 1.406vw',
-            duration: 0.2,
-            border: 'none',
-            ease: "power2.inOut",
-            overwrite: 'auto'
-        })
-
-          gsap.to("#cursorCircle span", {
-            x: '-100%',
-            duration: 0.2,
-            ease: "power2.inOut",
-            overwrite: 'auto'
-        })
-
-    }
     
     return(
         <button

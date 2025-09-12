@@ -13,10 +13,18 @@
     /* overflow: hidden; */
     
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
     display: none;
+}
+
+
+html{
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
 }
 
 section{

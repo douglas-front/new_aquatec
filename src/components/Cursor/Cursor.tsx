@@ -48,7 +48,7 @@ export default function Cursor() {
         <>
             <div id='cursorBorder' className={styles.cursorBorder}/>
             <div id='cursorCircle' className={styles.cursorCircle}>
-                <span>Clique</span>
+                <span>Orçamento</span>
             </div>
         </>
 
