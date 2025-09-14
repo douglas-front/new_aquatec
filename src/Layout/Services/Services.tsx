@@ -58,7 +58,7 @@ export default function Services() {
     return(
         <section className={styles.services}>
             <h1>
-                <div className={styles.circle}></div>
+                <span className={styles.circle}/>
                 Serviços
             </h1>
 

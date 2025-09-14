@@ -8,7 +8,7 @@
     margin: 1.302vw 0 1.302vw 0.3vw;
 }
 
-.retangleBlue{
+.rectangleBlue{
 
     position: relative;
 
@@ -26,7 +26,7 @@
     border-radius: 1.563vw;
 }
 
-.retangleBlue video{
+.rectangleBlue video{
     width: 95%;
     
     border-radius: 2vw;

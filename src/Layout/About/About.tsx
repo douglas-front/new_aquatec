@@ -7,26 +7,27 @@ export default function About() {
 
     const onEnter = () => {
 
-        gsap.to("#cursorCircle", {
+         gsap.set("#cursorCircle", {
             backgroundColor: 'var(--color-white)',
             duration: 0.4,
             ease: "power2.inOut",
         })
-        gsap.to("#cursorBorder", {
+        gsap.set("#cursorBorder", {
             border: '0.1vw solid var(--color-white)',
             duration: 0.4,
             ease: "power2.inOut",
         })
+       
     }
 
     const onLeave = () => {
-        gsap.to("#cursorCircle", {
+        gsap.set("#cursorCircle", {
             backgroundColor: 'var(--color-blue)',
             duration: 0.4,
             ease: "power2.inOut",
         })
 
-        gsap.to("#cursorBorder", {
+        gsap.set("#cursorBorder", {
             border: '0.1vw solid var(--color-blue)',
             duration: 0.4,
             ease: "power2.inOut",
@@ -36,17 +37,19 @@ export default function About() {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(`.${styles.circle}`, {
-            scale: 20,
+
+        gsap.to(`.${styles.circleAnimation}`, {
+            scale: 5,
             duration: 1,
             ease: 'power2.inOut',
 
             scrollTrigger: {
-                trigger: `.${styles.wrapper}`,
-                start: '10% 0%',
-                end: '100% 0%',
+                trigger: `.${styles.about}`,
+                start: '0% 0%',
+                end: '120% 0%',
                 scrub: true,
                 pin: true,
+                anticipatePin: 1,
 
                 onEnter: () => onEnter(),
                 onLeave: () => onLeave(),
@@ -72,9 +75,30 @@ export default function About() {
                 e atendimento ágil para resolver qualquer tipo de entupimento, <br />
                 garantindo segurança, limpeza e eficiência.
             </p>
-
             <div className={styles.wrapper}>
-                <div className={styles.circle} />
+                <div className={styles.circleAnimation}/>
+
+                <h1>
+                    <span className={styles.circle} />
+                    Sobre
+                </h1>
+
+                <p>
+                    Trabalhamos com tecnologia moderna, equipe qualificada <br />
+                    e atendimento ágil para resolver qualquer tipo de entupimento, <br />
+                    garantindo segurança, limpeza e eficiência.
+                </p>
+                <br />
+                <p>
+                    Trabalhamos com tecnologia moderna, equipe qualificada <br />
+                    e atendimento ágil para resolver qualquer tipo de entupimento, <br />
+                    garantindo segurança, limpeza e eficiência.
+                </p>
+
+                <div className={styles.rectangleWhite} >
+
+                </div>
+
             </div>
         </section>
     )

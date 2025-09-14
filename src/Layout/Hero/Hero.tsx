@@ -11,25 +11,25 @@ export default function Hero() {
 
     const onEnter = () => {
 
-        gsap.to(`.${styles.retangleBlue} video`,{
+        gsap.to(`.${styles.rectangleBlue} video`,{
             y: 0,
             width: '100%',
             borderRadius: 0,
         })
 
-        gsap.to(`.${styles.retangleBlue}`,{
+        gsap.to(`.${styles.rectangleBlue}`,{
             borderRadius: 0,
         })
     }
 
     const onLeave = () => {
-        gsap.to(`.${styles.retangleBlue} video`,{
+        gsap.to(`.${styles.rectangleBlue} video`,{
             y: '15%',
             width: '95%',
             borderRadius: '2vw',
         })
 
-        gsap.to(`.${styles.retangleBlue}`,{
+        gsap.to(`.${styles.rectangleBlue}`,{
             borderRadius: '1.563vw',
         })
     }
@@ -38,7 +38,7 @@ export default function Hero() {
         gsap.registerPlugin(ScrollTrigger)
 
         ScrollTrigger.create({
-            trigger: `.${styles.retangleBlue}`,
+            trigger: `.${styles.rectangleBlue}`,
                 start: '0% 0%',
                 end: '100% 0%',
                 scrub: true,
@@ -75,8 +75,8 @@ export default function Hero() {
 
         return () => {
             ScrollTrigger.killAll()
-            gsap.killTweensOf(`.${styles.retangleBlue}`)
-            gsap.killTweensOf(`.${styles.retangleBlue} video`)
+            gsap.killTweensOf(`.${styles.rectangleBlue}`)
+            gsap.killTweensOf(`.${styles.rectangleBlue} video`)
         }
     },[])
     
@@ -92,7 +92,7 @@ export default function Hero() {
             </p>
             <Button/>
 
-            <div className={styles.retangleBlue}>
+            <div className={styles.rectangleBlue}>
                 <video ref={video} loop muted playsInline>
                     <source src="/apresentation.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeo.
