@@ -1,11 +1,18 @@
 
-
 .hero h1{
     margin-top: 6.615vw;
+    overflow: hidden;
+    height: 100%;
 }
 
+.hero h1 span{
+    display: block;
+    font-size: 6.677vw;
+    transform: translateY(200%);
+}   
+
 .hero p{
-    margin: 1.302vw 0 1.302vw 0.3vw;
+    margin:2.302vw 0 1.302vw 0.3vw;
 }
 
 .rectangleBlue{
@@ -24,6 +31,7 @@
 
     background-color: var(--color-blue);
     border-radius: 1.563vw;
+
 }
 
 .rectangleBlue video{
@@ -31,5 +39,5 @@
     
     border-radius: 2vw;
     background-color: var(--color-white);
-    transform: translateY(15%);
+    transform: translateY(30%);
 }

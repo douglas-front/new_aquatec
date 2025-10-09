@@ -1,6 +1,9 @@
 import Cursor from "./components/Cursor/Cursor"
 import About from "./Layout/About/About"
+import CallForm from "./Layout/CallForm/CallForm"
+import Footer from "./Layout/Footer/Footer"
 import Hero from "./Layout/Hero/Hero"
+import Nav from "./Layout/Nav/Nav"
 import Services from "./Layout/Services/Services"
 
 function App() {
@@ -8,12 +11,15 @@ function App() {
   return (
     <>
         <Cursor />
+        <Nav />
         <main>
           <Hero />
           <Services />
           <About />
-          <h1>jbkkkkkkkkkkbk</h1>
+          <CallForm/>
+          {/* <h1>jbkkkkkkkkkkbk</h1> */}
         </main>
+        <Footer/>
     </>
   )
 }

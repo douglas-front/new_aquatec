@@ -1,22 +1,37 @@
 import styles from './Button.module.css'
 import { onMouseEnterInButton, onMouseLeaveInButton } from '../../services/AnimateCursor.service'
 
-export default function Button() {
-    
-    return(
-        <button
-         className={styles.button}
-         onMouseEnter={onMouseEnterInButton}
-         onMouseLeave={onMouseLeaveInButton} 
+interface ButtonProps {
+    backgroundColor: string,
+    fill: string,
+    textWhatsApp: string,
+    label?: string
+}
+
+export default function Button({ backgroundColor, fill, textWhatsApp, label = "Orçamento Grátis" }: ButtonProps) {
+   
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=8191293041&text=${encodeURIComponent(textWhatsApp)}`
+
+    return (
+        <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ backgroundColor, color: fill }}
+            className={styles.button}
+            onMouseEnter={onMouseEnterInButton}
+            onMouseLeave={onMouseLeaveInButton}
+            aria-label="Solicitar orçamento grátis pelo WhatsApp"
+            role="button"
         >
-            Orçamento Gratis
+            {label}
 
-            <div className={styles.line}></div>
+            <div className={styles.line} style={{ backgroundColor: fill }}></div>
 
-            <svg width="0.885vw" height="1.51vw" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.15128 12.7278C5.36051 11.7772 4.14145 10.7944 4.14145 9.26389C4.14145 7.50778 5.82809 6.28333 8.65029 6.28333C11.6228 6.28333 12.725 7.65278 12.8251 9.66667H16.5157C16.3988 6.89556 14.6454 4.35 11.1552 3.52833V0H6.14538V3.48C2.9057 4.15667 0.300589 6.18667 0.300589 9.29611C0.300589 13.0178 3.49018 14.8706 8.14931 15.95C12.3242 16.9167 13.1591 18.3344 13.1591 19.8328C13.1591 20.9444 12.3409 22.7167 8.65029 22.7167C5.21022 22.7167 3.85756 21.2344 3.67387 19.3333H0C0.200393 22.8617 2.9391 24.8433 6.14538 25.5039V29H11.1552V25.5361C14.4116 24.94 17 23.1194 17 19.8167C17 15.2411 12.942 13.6783 9.15128 12.7278Z" fill="white"/>
+            <svg width="0.885vw" height="1.51vw" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <title>Ícone WhatsApp</title>
+                <path d="M9.15128 12.7278C5.36051 11.7772 4.14145 10.7944 4.14145 9.26389C4.14145 7.50778 5.82809 6.28333 8.65029 6.28333C11.6228 6.28333 12.725 7.65278 12.8251 9.66667H16.5157C16.3988 6.89556 14.6454 4.35 11.1552 3.52833V0H6.14538V3.48C2.9057 4.15667 0.300589 6.18667 0.300589 9.29611C0.300589 13.0178 3.49018 14.8706 8.14931 15.95C12.3242 16.9167 13.1591 18.3344 13.1591 19.8328C13.1591 20.9444 12.3409 22.7167 8.65029 22.7167C5.21022 22.7167 3.85756 21.2344 3.67387 19.3333H0C0.200393 22.8617 2.9391 24.8433 6.14538 25.5039V29H11.1552V25.5361C14.4116 24.94 17 23.1194 17 19.8167C17 15.2411 12.942 13.6783 9.15128 12.7278Z" fill={fill} />
             </svg>
-
-        </button>
+        </a>
     )
 }

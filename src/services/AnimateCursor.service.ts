@@ -13,6 +13,7 @@ export const onMouseEnterInButton = () => {
         border: '0.1vw solid var(--color-blue)',
         duration: 0.4,
         ease: "power2.inOut",
+        overwrite: 'auto'
     })
 
     gsap.to("#cursorCircle span", {

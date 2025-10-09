@@ -2,44 +2,46 @@ import { useGSAP } from "@gsap/react";
 import styles from "./About.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { AnimateUpElement } from "../../services/AnimateUpElement";
 
 export default function About() {
   const onEnter = () => {
-    gsap.killTweensOf(`.${styles.rectangleWhite}`);
-    gsap.killTweensOf(`.${styles.rectangleWhite} img`);
 
     gsap.to(`.${styles.rectangleWhite} img`, {
-      scale       : 1,
-      duration    : 2,
-      width       : "100%",
+      scale: 1,
+      duration: 2,
+      width: "100%",
       borderRadius: 0,
-      ease        : "elastic.inOut(1, 9)",
+      ease: "elastic.inOut(1, 9)",
+      overwrite: "auto",
     });
 
     gsap.to(`.${styles.rectangleWhite}`, {
-      scale       : 1,
-      duration    : 2,
+      scale: 1,
+      duration: 2,
       borderRadius: 0,
-      ease        : "elastic.inOut(1, 9)",
+      ease: "elastic.inOut(1, 9)",
+      overwrite: "auto",
+
     });
   };
 
   const onLeave = () => {
     gsap.to(`.${styles.rectangleWhite} img`, {
-      scale       : 0,
-      duration    : 1,
-      width       : "95%",
+      scale: 0,
+      duration: 1,
+      width: "95%",
       borderRadius: "1.563vw",
-      ease        : "elastic.inOut(1, 9)",
-      overwrite   : "auto",
+      ease: "elastic.inOut(1, 9)",
+      overwrite: "auto",
     });
 
     gsap.to(`.${styles.rectangleWhite}`, {
-      scale       : 0,
-      duration    : 1,
+      scale: 0,
+      duration: 1,
       borderRadius: "1.563vw",
-      ease        : "elastic.inOut(1, 9)",
-      overwrite   : "auto",
+      ease: "elastic.inOut(1, 9)",
+      overwrite: "auto",
     });
   };
 
@@ -48,8 +50,8 @@ export default function About() {
 
     ScrollTrigger.create({
       trigger: `.${styles.about}`,
-      start  : "140% 0%",
-      end    : "200% 0%",
+      start: "140% 0%",
+      end: "200% 0%",
 
       onEnter: () => {
         onEnter();
@@ -69,7 +71,6 @@ export default function About() {
     });
 
     return () => {
-      ScrollTrigger.killAll();
       gsap.killTweensOf(`.${styles.rectangleWhite}`);
       gsap.killTweensOf(`.${styles.rectangleWhite} img`);
     };
@@ -79,43 +80,48 @@ export default function About() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(`.${styles.circleAnimation}`, {
-      scale   : 5,
+      scale: 5,
       duration: 1,
-      ease    : "power2.inOut",
+      ease: "power2.inOut",
 
       scrollTrigger: {
-        trigger      : `.${styles.about}`,
-        start        : "0% 0%",
-        end          : "120% 0%",
-        scrub        : true,
-        pin          : true,
+        trigger: `.${styles.about}`,
+        start: "0% 0%",
+        end: "120% 0%",
+        scrub: true,
+        pin: true,
         anticipatePin: 1,
 
-        onLeave: () => {},
+        onEnter:() =>{
+          AnimateUpElement(`${styles.about} p span`, '0')
+
+        }
       },
     });
 
     return () => {
       gsap.killTweensOf(`.${styles.circle}`);
+      gsap.killTweensOf(`.${styles.about} p span`);
 
       ScrollTrigger.killAll();
     };
   }, []);
 
   return (
-    <section className = {styles.about}>
+    <section className={styles.about} id="about">
       <p>
-        Trabalhamos com tecnologia moderna, equipe qualificada <br />
+        <span>Trabalhamos com tecnologia moderna, equipe qualificada <br />
         e atendimento ágil para resolver qualquer tipo de entupimento, <br />
-        garantindo segurança, limpeza e eficiência.
+        garantindo segurança, limpeza e eficiência.</span>
       </p>
-      <div className = {styles.wrapper}>
-      <div className = {styles.circleAnimation} />
 
-        <h1>
-          <span className = {styles.circle} />
+      <div className={styles.wrapper}>
+        <div className={styles.circleAnimation} />
+
+        <h2>
+          <span className={styles.circle} />
           Sobre
-        </h1>
+        </h2>
 
         <p>
           Trabalhamos com tecnologia moderna, equipe qualificada <br />
@@ -129,10 +135,13 @@ export default function About() {
           garantindo segurança, limpeza e eficiência.
         </p>
 
-        <div className = {styles.rectangleWhite}>
-        <img src       = "/aboutPhoto.png" alt = "" />
-        </div>
+
+        <figure className={styles.rectangleWhite}>
+          <img loading="lazy" src="/aboutPhoto.png" alt="exemplo de desentupimento" />
+        </figure>
+
       </div>
+
     </section>
   );
 }

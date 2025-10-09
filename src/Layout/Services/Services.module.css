@@ -1,7 +1,10 @@
-.services{
+.services {
+    position: relative;
     overflow: hidden;
+    margin-top: 2vw;
 }
-.circle{
+
+.circle {
     width: 1.771vw;
     height: 1.771vw;
 
@@ -10,13 +13,13 @@
 
 }
 
-.services h1{
+.services h2 {
     display: flex;
     align-items: center;
     gap: 0.729vw;
 }
 
-.line{
+.line {
     width: 100%;
     height: 0.05vw;
     background-color: var(--color-blue);
@@ -24,16 +27,18 @@
     margin-top: 7.031vw;
 }
 
-.wrapper{
+.wrapper {
     margin-top: 1.979vw;
     display: flex;
     gap: 0.421vw;
 }
 
-.card{
-      display: flex;
-      flex-direction: column;
+.card {
 
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
 
     cursor: pointer;
     flex-shrink: 0;
@@ -43,14 +48,14 @@
     border: 0.1vw solid var(--color-blue);
     border-radius: 0.781vw;
 
-    padding: 0.938vw 0 0.938vw 0.938vw;
+    padding: 0.938vw;
 
     transition: all 0.15s ease-in-out;
 }
 
 
 .card:hover {
-    background-color: var(--color-blue);
+    background-color: var(--color-blue-dark);
 }
 
 .card:hover span,
@@ -59,16 +64,24 @@
     color: var(--color-white);
 }
 
-.card span{
+.card span {
     font-weight: 900;
 }
 
-.card h3{
+.card h3 {
     margin-top: 1.51vw;
+    overflow: hidden;
 }
 
-.card p{
-    margin-top: auto;
-    
-    
+.card h3 span {
+    display: block;
+    font-size: 3.339vw;
+    font-weight: 500;
+
+    transform: translateY(200%);
 }
+
+.card p {
+    margin-top: auto;
+}
+
