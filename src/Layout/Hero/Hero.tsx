@@ -36,10 +36,11 @@ export default function Hero() {
 
         ScrollTrigger.create({
             trigger: `.${styles.rectangleBlue}`,
-            start: '0% 0%',
+            start: '-20% 0%',
             end: '100% 0%',
             scrub: true,
-            pin: true,
+            // pin: window.innerWidth == 500 ? true : false,
+            markers: true,
             onEnter: () => {
                 onEnter()
                 if (video.current) {
