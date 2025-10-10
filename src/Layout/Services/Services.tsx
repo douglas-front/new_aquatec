@@ -78,6 +78,8 @@ export default function Services() {
                         href={`https://api.whatsapp.com/send?phone=8191293041&text=Olá, eu gostaria de fazer um orçamento sobre ${card.title[0]} ${card.title[1]}`}
                         target='_blank'
                         className={styles.card}
+                        aria-label="Card sobre os serviços da AquaTec."
+                        title={`Card sobre os serviços da AquaTec. ${card.title[0] + ' ' + card.title[1]}`}
                         onMouseEnter={() => {
                             animateCursorEnter()
                             animateCursorChangeImage(index)

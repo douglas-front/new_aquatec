@@ -108,9 +108,9 @@ export default function Footer() {
 
             </div>
 
-            <h1 className='large'>
+            <div className={`${styles.logo} large`}>
                 <span className={styles.textStroke}>A</span>QUATEC
-            </h1>
+            </div>
 
             <small>developed by Douglas</small>
         </footer>

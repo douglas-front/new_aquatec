@@ -46,12 +46,6 @@ h1{
     font-size: 6.677vw;
 }
 
-
-h1.large{
-    font-size: 19.167vw;
-    font-weight: 900;
-}
-
 h2{
     font-size: 3.339vw;
 }
@@ -79,4 +73,16 @@ small{
     display: block;
     text-align: center;
     color: var(--color-blue);
+}
+
+.large{
+    color: var(--color-blue);
+    font-size: 19.167vw;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 500px) {
+    p{
+        font-size: 3vw;
+    }
 }

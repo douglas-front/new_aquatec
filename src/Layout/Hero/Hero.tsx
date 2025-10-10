@@ -82,7 +82,6 @@ export default function Hero() {
         AnimateUpElement(`${styles.hero} h1 span`, '0')
         AnimateUpElement(`${styles.rectangleBlue} video`, '15%', 0.2)
 
-
         return () => {
             gsap.killTweensOf(`.${styles.hero} h1 span`)
             gsap.killTweensOf(`.${styles.rectangleBlue} video`)
@@ -101,13 +100,13 @@ export default function Hero() {
                 indústrias.
             </p>
             <Button
-                textWhatsApp='Olá eu gostaria de fazer um orçamento'
+                textWhatsApp='Olá, eu gostaria de fazer um orçamento'
                 backgroundColor='#083157'
                 fill='#fff'
             />
+            
             <div className={styles.rectangleBlue}>
                 <video
-
                     ref={video}
                     loop
                     muted

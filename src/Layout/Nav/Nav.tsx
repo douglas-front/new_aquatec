@@ -38,6 +38,7 @@ export default function Nav() {
                 aria-label='Abrir ou fechar menu de navegação'
                 aria-expanded={menuOpen}
                 aria-controls="main-navigation"
+                title='Abrir ou fechar menu de navegação'
             >
                 <div className={styles.line}></div>
                 <div className={styles.line}></div>

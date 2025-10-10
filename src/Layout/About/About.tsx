@@ -136,7 +136,7 @@ export default function About() {
         </p>
 
 
-        <figure className={styles.rectangleWhite}>
+        <figure className={styles.rectangleWhite} title="imagem ilustrativa">
           <img loading="lazy" src="/aboutPhoto.png" alt="exemplo de desentupimento" />
         </figure>
 
