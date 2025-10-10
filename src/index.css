@@ -13,12 +13,22 @@
     /* overflow: hidden; */
     
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
     display: none;
 }
 
+
+html{
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+
+header,
+footer,
 section{
     padding-inline: 1.302vw;
 }
@@ -28,7 +38,7 @@ h1,h2{
     height: 7.656vw;
 }
 
-h1,h2, h3,p,span{
+h1,h2, h3,h4,p,span{
     color: var(--color-blue);
 }
 
@@ -45,6 +55,34 @@ h3{
     font-weight: 500;
 }
 
+h4{
+    font-size: 2.411vw;
+    font-weight: 500;
+}
+
 p,span{
     font-size: 1.25vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+small{
+    font-size: 1vw;
+    display: block;
+    text-align: center;
+    color: var(--color-blue);
+}
+
+.large{
+    color: var(--color-blue);
+    font-size: 19.167vw;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 500px) {
+    p{
+        font-size: 3vw;
+    }
 }

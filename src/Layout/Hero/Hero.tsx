@@ -4,32 +4,29 @@ import styles from './Hero.module.css'
 import Button from '../../components/Button/Button'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+import { AnimateUpElement } from '../../services/AnimateUpElement'
 
 export default function Hero() {
-
     const video = useRef<HTMLVideoElement | null>(null)
 
     const onEnter = () => {
-
-        gsap.to(`.${styles.retangleBlue} video`,{
+        gsap.to(`.${styles.rectangleBlue} video`, {
             y: 0,
             width: '100%',
             borderRadius: 0,
         })
-
-        gsap.to(`.${styles.retangleBlue}`,{
+        gsap.to(`.${styles.rectangleBlue}`, {
             borderRadius: 0,
         })
     }
 
     const onLeave = () => {
-        gsap.to(`.${styles.retangleBlue} video`,{
+        gsap.to(`.${styles.rectangleBlue} video`, {
             y: '15%',
             width: '95%',
             borderRadius: '2vw',
         })
-
-        gsap.to(`.${styles.retangleBlue}`,{
+        gsap.to(`.${styles.rectangleBlue}`, {
             borderRadius: '1.563vw',
         })
     }
@@ -38,51 +35,63 @@ export default function Hero() {
         gsap.registerPlugin(ScrollTrigger)
 
         ScrollTrigger.create({
-            trigger: `.${styles.retangleBlue}`,
-                start: '0% 0%',
-                end: '100% 0%',
-                scrub: true,
-
-                pin: true,
-                
-
-                onEnter: () =>{
-                    onEnter()
-                    video.current!.currentTime = 0
-
-                    video.current?.play()
-                },
-
-                onEnterBack: () =>{
-                    onEnter()
-                    video.current!.currentTime = 0
-
-                    video.current?.play()
-                },
-
-                  onLeave: () =>{ 
-                    onLeave()
-                    video.current!.currentTime = 0
-                    video.current?.pause()
-                },
-
-                onLeaveBack: () =>{ 
-                    onLeave()
-                    video.current!.currentTime = 0
-                    video.current?.pause()
+            trigger: `.${styles.rectangleBlue}`,
+            start: '0% 0%',
+            end: '100% 0%',
+            scrub: true,
+            pin: true,
+            onEnter: () => {
+                onEnter()
+                if (video.current) {
+                    video.current.currentTime = 0
+                    video.current.play()
                 }
+            },
+            onEnterBack: () => {
+                onEnter()
+                if (video.current) {
+                    video.current.currentTime = 0
+                    video.current.play()
+                }
+            },
+            onLeave: () => {
+                onLeave()
+                if (video.current) {
+                    video.current.currentTime = 0
+                    video.current.pause()
+                }
+            },
+            onLeaveBack: () => {
+                onLeave()
+                if (video.current) {
+                    video.current.currentTime = 0
+                    video.current.pause()
+                }
+            }
         })
 
         return () => {
             ScrollTrigger.killAll()
-            gsap.killTweensOf(`.${styles.retangleBlue}`)
-            gsap.killTweensOf(`.${styles.retangleBlue} video`)
+            gsap.killTweensOf(`.${styles.rectangleBlue}`)
+            gsap.killTweensOf(`.${styles.rectangleBlue} video`)
         }
-    },[])
-    
-    return(
-        <section className={styles.hero}>
-            <h1>Rápido, sem quebrar nada</h1>
+    }, [])
+
+    useGSAP(() => {
+
+        AnimateUpElement(`${styles.hero} h1 span`, '0')
+        AnimateUpElement(`${styles.rectangleBlue} video`, '15%', 0.2)
+
+        return () => {
+            gsap.killTweensOf(`.${styles.hero} h1 span`)
+            gsap.killTweensOf(`.${styles.rectangleBlue} video`)
+        }
+        
+    }, [])
+
+    return (
+        <section className={styles.hero} aria-label="Seção de destaque">
+            <h1><span>Desentupimento rápido,</span> <span>limpo e sem quebrar nada</span></h1>
             <p>
                 A AquaTec é especializada em desentupimentos <br />
                 rápidos, limpos e sem quebrar nada. Com equipe <br />
@@ -90,10 +99,22 @@ export default function Hero() {
                 soluções eficientes para residências, comércios e <br />
                 indústrias.
             </p>
-            <Button/>
-
-            <div className={styles.retangleBlue}>
-                <video ref={video} loop muted playsInline>
+            <Button
+                textWhatsApp='Olá, eu gostaria de fazer um orçamento'
+                backgroundColor='#083157'
+                fill='#fff'
+            />
+            
+            <div className={styles.rectangleBlue}>
+                <video
+                    ref={video}
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    aria-label="Vídeo institucional AquaTec"
+                    title="Vídeo institucional AquaTec"
+                >
                     <source src="/apresentation.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeo.
                 </video>

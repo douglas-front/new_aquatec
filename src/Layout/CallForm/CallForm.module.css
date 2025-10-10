@@ -1,0 +1,68 @@
+.callForm{
+    background-color: var(--color-blue);
+    padding-bottom: 10vw;
+}
+
+.circle {
+    width: 1.771vw;
+    height: 1.771vw;
+
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+
+.callForm h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.729vw;
+    color: var(--color-white);
+}
+
+.formMessage,
+.formService{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formMessage{
+      margin-top: 2vw;
+}
+
+.formMessage,
+.formService label{
+    color: var(--color-white);
+    font-size: 1.25vw;
+    font-weight: 900;
+
+    margin-bottom: 0.3vw;
+}
+
+.formService input{
+    width: 40vw;
+    height: 2.448vw;
+    background-color: var(--color-white);
+    border-radius: 0.625vw;
+    border: none;
+    outline: none;
+
+    color: var(--color-blue);
+
+    padding-left: 1.042vw;
+}
+
+.formMessage textarea{
+    width: 40vw;
+
+    height: 18.229vw;
+    background-color: var(--color-white);
+    border-radius: 0.625vw;
+    border: none;
+    outline: none;
+
+    color: var(--color-blue);
+
+    padding: 1.042vw;
+    resize: none;
+
+}

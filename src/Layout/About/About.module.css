@@ -1,0 +1,84 @@
+.about {
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+}
+
+.about p {
+  padding-top: 10.781vw;
+  overflow: hidden;
+}
+
+.about p span{
+  display: block;
+  transform: translateY(100%);
+}
+
+.circle {
+  width: 1.771vw;
+  height: 1.771vw;
+
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.about h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.729vw;
+  color: var(--color-white);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 70.25vw;
+}
+
+.wrapper p {
+  padding-top: 0;
+  color: var(--color-white);
+}
+
+.circleAnimation {
+
+  position: absolute;
+  top: 19.271vw;
+  left: 29.844vw;
+  width: 40.26vw;
+  height: 40.26vw;
+
+  border-radius: 50%;
+  background-color: var(--color-blue);
+
+  z-index: -1;
+}
+
+.rectangleWhite {
+  scale: 0;
+
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 46.917vw;
+
+  margin-top: 3.854vw;
+
+  background-color: var(--color-white);
+  border-radius: 1.563vw;
+}
+
+.rectangleWhite img {
+  scale: 0;
+
+  object-fit: cover;
+  width: 95%;
+  height: 100%;
+
+  border-radius: 2vw;
+  background-color: var(--color-blue);
+  transform: translateY(15%);
+}
