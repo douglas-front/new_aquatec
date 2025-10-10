@@ -80,3 +80,11 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 500px) {
+    .cursorCircle,
+    .imagesCursor,
+    .cursorBorder{
+        display: none;
+    }
+}

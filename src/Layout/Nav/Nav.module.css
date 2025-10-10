@@ -103,5 +103,43 @@
     color: var(--color-white);
     font-weight: 500;
     transform: translateY(100%);
-  
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .header button {
+        width: 15.406vw;
+        height: 2vw;
+    }
+
+    .header img {
+        width: 15.615vw;
+        height: 15.615vw;
+    }
+
+    .nav {
+        top: 10.515vw;
+        right: 2.302vw;
+        width: 50.052vw;
+        height: 50.99vw;
+    }
+
+    .nav ul li span {
+        font-size: 3.875vw;
+    }
+
+    .nav ul {
+        padding: 5.604vw;
+
+        gap: 4.563vw;
+    }
+
+    .nav ul li span::after {
+
+        width: 3.146vw;
+        height: 3.146vw;
+
+
+    }
 }

@@ -82,7 +82,8 @@ small{
 }
 
 @media screen and (max-width: 500px) {
-    p{
+    p,
+    span{
         font-size: 3vw;
     }
 }

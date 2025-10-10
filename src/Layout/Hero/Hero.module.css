@@ -43,6 +43,10 @@
 
 @media screen and (max-width: 500px) {
 
+    .hero{
+        overflow-x: hidden;
+    }
+
     .hero h1 {
         margin-top: 19.6vw;
     }
@@ -59,7 +63,7 @@
 
     .rectangleBlue {
         width: 100%;
-        height: 125vw;
+        height: 135vw;
         margin-top: 3.854vw;
         border-radius: 1.563vw;
 
@@ -69,7 +73,7 @@
         width: 95%;
         height: 100%;
         border-radius: 2vw;
-        transform: translateY(30%);
+        transform: translateY(50%);
         object-fit: cover;
     }
 
