@@ -12,6 +12,7 @@
 }
 
 .header button {
+    
     cursor: pointer;
     width: 6.406vw;
     height: 1vw;
@@ -19,16 +20,15 @@
     border: none;
     background-color: transparent;
 
+    color: var(--color-blue-dark);
+
 }
+
 
 .line {
     width: 100%;
     height: 0.15vw;
     background-color: var(--color-blue-dark);
-}
-
-.line:last-of-type {
-    margin-top: 0.885vw;
 }
 
 .header img {
