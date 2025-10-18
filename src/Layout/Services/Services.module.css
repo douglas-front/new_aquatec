@@ -88,6 +88,7 @@
 @media screen and (max-width: 768px) {
     .services {
         margin-top: 9vw;
+        padding-bottom: 1vw;
     }
 
     .circle {

@@ -50,8 +50,9 @@ export default function About() {
 
     ScrollTrigger.create({
       trigger: `.${styles.about}`,
-      start: "140% 0%",
-      end: "200% 0%",
+      start: window.innerWidth == 768? "140% 0%" : "50% 20%",
+      end: window.innerWidth == 768? "200% 0" : "70% 0%",
+      markers: true,
 
       onEnter: () => {
         onEnter();
@@ -87,11 +88,10 @@ export default function About() {
       scrollTrigger: {
         trigger: `.${styles.about}`,
         start: "0% 0%",
-        end: "120% 0%",
+        end: "20% 0%",
         scrub: true,
         pin: true,
         anticipatePin: 1,
-
         onEnter:() =>{
           AnimateUpElement(`${styles.about} p span`, '0')
 
