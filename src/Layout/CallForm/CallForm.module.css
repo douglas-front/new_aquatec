@@ -66,3 +66,38 @@
     resize: none;
 
 }
+
+@media screen and (max-width: 768px) {
+    .callForm{
+        padding-bottom: 20vw;
+    }
+
+    .circle {
+        width: 3.167vw;
+        height: 3.167vw;
+    }
+
+    .formService label{
+        margin-top: 3vw;
+    }
+
+    .formMessage,
+    .formMessage label,
+    .formService label{
+        font-size: 3.125vw;
+        margin-bottom: 2vw;
+    }
+
+    .formService input{
+        width: 100%;
+        height: 6.25vw;
+        font-size: 3.125vw;
+    }
+
+    .formMessage textarea{
+        width: 100%;
+        height: 56.458vw;
+        font-size: 3.125vw;
+    }
+    
+}
