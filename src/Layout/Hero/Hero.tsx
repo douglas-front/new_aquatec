@@ -39,8 +39,6 @@ export default function Hero() {
             start: '-20% 0%',
             end: '100% 0%',
             scrub: true,
-            // pin: window.innerWidth == 500 ? true : false,
-            // markers: true,
             onEnter: () => {
                 onEnter()
                 if (video.current) {

@@ -52,7 +52,8 @@ export default function Services() {
             x: -widthsRef.current.reduce((a, b) => a + b, 0) + (window.innerWidth - 100),
             scrollTrigger: {
                 trigger: `.${styles.wrapper}`,
-                start: '-10% 0%',
+                // start: '-10% 0%',
+                start: window.innerWidth == 500 ?'-10% 0%' : '10% 20%',
                 end: '100% 0%',
                 scrub: true,
                 pin: true,
