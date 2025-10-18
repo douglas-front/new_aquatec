@@ -52,7 +52,6 @@ export default function About() {
       trigger: `.${styles.about}`,
       start: window.innerWidth == 768? "140% 0%" : "50% 20%",
       end: window.innerWidth == 768? "200% 0" : "70% 0%",
-      markers: true,
 
       onEnter: () => {
         onEnter();
