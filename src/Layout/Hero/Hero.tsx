@@ -40,7 +40,7 @@ export default function Hero() {
             end: '100% 0%',
             scrub: true,
             // pin: window.innerWidth == 500 ? true : false,
-            markers: true,
+            // markers: true,
             onEnter: () => {
                 onEnter()
                 if (video.current) {

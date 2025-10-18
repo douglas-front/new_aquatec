@@ -41,6 +41,7 @@ export default function Nav() {
                 title='Abrir ou fechar menu de navegação'
             >
                 <div className={styles.line}></div>
+                menu
                 <div className={styles.line}></div>
             </button>
 

@@ -4,8 +4,11 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { animateCursorEnter, animateCursorLeave, animateCursorChangeImage } from '../../services/AnimateCursorImage'
 import { AnimateUpElement } from '../../services/AnimateUpElement'
+import { useRef } from 'react'
 
 export default function Services() {
+
+    const widthsRef = useRef<number[]>([])
 
     const cards = [
         {
@@ -36,10 +39,17 @@ export default function Services() {
     ]
 
     useGSAP(() => {
+
+        const cardsServices = gsap.utils.toArray(`.${styles.card}`) as HTMLElement[]
+
+        widthsRef.current = cardsServices.map(card => card.getBoundingClientRect().width)
+
+        console.log('card widths:', widthsRef.current)
+
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.to(`.${styles.wrapper}`, {
-            xPercent: -80,
+            x: -widthsRef.current.reduce((a, b) => a + b, 0) + (window.innerWidth - 100),
             scrollTrigger: {
                 trigger: `.${styles.wrapper}`,
                 start: '-10% 0%',
@@ -75,6 +85,8 @@ export default function Services() {
                 {cards.map((card, index,) => (
 
                     <a
+                        key={index}
+
                         href={`https://api.whatsapp.com/send?phone=8191293041&text=Olá, eu gostaria de fazer um orçamento sobre ${card.title[0]} ${card.title[1]}`}
                         target='_blank'
                         className={styles.card}

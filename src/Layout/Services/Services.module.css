@@ -85,3 +85,37 @@
     margin-top: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .services {
+        margin-top: 9vw;
+    }
+
+    .circle {
+        width: 3.771vw;
+        height: 3.771vw;
+    }
+
+    .card {
+
+        width: 69.2vw;
+        height: 113.4vw;
+        border: 0.1vw solid var(--color-blue);
+        border-radius: 0.781vw;
+
+        padding: 1.938vw;
+
+    }
+
+    .card h3 {
+        margin-top: 3.51vw;
+    }
+
+    .card h3 span {
+        font-size: 6.41vw;
+    }
+
+
+    .card span {
+        font-size: 4gvw;
+    }
+}
