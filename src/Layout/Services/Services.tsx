@@ -44,8 +44,6 @@ export default function Services() {
 
         widthsRef.current = cardsServices.map(card => card.getBoundingClientRect().width)
 
-        console.log('card widths:', widthsRef.current)
-
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.to(`.${styles.wrapper}`, {
