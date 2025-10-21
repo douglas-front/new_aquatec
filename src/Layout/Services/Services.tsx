@@ -107,6 +107,7 @@ export default function Services() {
 
             </div>
 
+            <img src="/creditCards.png" alt="marcas de cartões de credito/debito" />
         </section>
     )
 }

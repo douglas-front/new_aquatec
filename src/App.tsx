@@ -1,4 +1,5 @@
 import Cursor from "./components/Cursor/Cursor"
+import WhatsappButton from "./components/whatsappButton/whatsappButton"
 import About from "./Layout/About/About"
 import CallForm from "./Layout/CallForm/CallForm"
 import Footer from "./Layout/Footer/Footer"
@@ -10,16 +11,17 @@ function App() {
 
   return (
     <>
-        <Cursor />
-        <Nav />
-        <main>
-          <Hero />
-          <Services />
-          <About />
-          <CallForm/>
-          {/* <h1>jbkkkkkkkkkkbk</h1> */}
-        </main>
-        <Footer/>
+      <Cursor />
+      <Nav />
+      <main>
+        <WhatsappButton />
+        <Hero />
+        <Services />
+        <About />
+        <CallForm />
+        {/* <h1>jbkkkkkkkkkkbk</h1> */}
+      </main>
+      <Footer />
     </>
   )
 }
