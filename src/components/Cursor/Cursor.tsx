@@ -62,11 +62,11 @@ export default function Cursor() {
 
             <div className={styles.imagesCursor}>
                 <div>
-                    <img loading='lazy' src="/piaDesen.webp" alt="desentupimento de pia" />
-                    <img loading='lazy' src="/vasoDesen.webp" alt="desentupimento de vaso" />
-                    <img loading='lazy' src="/hidrojateamento.webp" alt="hidrojateamento" />
-                    <img loading='lazy' src="/fossaDesen.webp" alt="desentupimento de fossas septicas" />
-                    <img loading='lazy' src="/raloDesen.webp" alt="desentupimento de ralos" />
+                    <img  src="/piaDesen.webp" alt="desentupimento de pia" />
+                    <img  src="/vasoDesen.webp" alt="desentupimento de vaso" />
+                    <img  src="/hidrojateamento.webp" alt="hidrojateamento" />
+                    <img  src="/fossaDesen.webp" alt="desentupimento de fossas septicas" />
+                    <img  src="/raloDesen.webp" alt="desentupimento de ralos" />
                 </div>
             </div>
         </>

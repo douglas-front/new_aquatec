@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-blue: #0B5294;
     --color-blue-dark: #083157;
 
@@ -6,91 +6,106 @@
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
-    
+
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
 
-html{
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1;
+html {
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
 }
 
 header,
 footer,
-section{
+section {
     padding-inline: 1.302vw;
 }
 
-h1,h2{
+h1,
+h2 {
     font-weight: 700;
     height: 7.656vw;
 }
 
-h1,h2, h3,h4,p,span{
+h1,
+h2,
+h3,
+h4,
+p,
+span {
     color: var(--color-blue);
 }
 
-h1{
+h1 {
     font-size: 6.677vw;
 }
 
-h2{
+h2 {
     font-size: 3.339vw;
 }
 
-h3{
+h3 {
     font-size: 3.339vw;
     font-weight: 500;
 }
 
-h4{
+h4 {
     font-size: 2.411vw;
     font-weight: 500;
 }
 
-p,span{
+p,
+span {
     font-size: 1.25vw;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-small{
+small {
     font-size: 1vw;
     display: block;
     text-align: center;
     color: var(--color-blue);
 }
 
-.large{
+.large {
     color: var(--color-blue);
     font-size: 19.167vw;
     font-weight: 900;
 }
 
 @media screen and (max-width: 500px) {
+
+    small{
+        font-size: 2vw;
+    }
     p,
-    span{
+    span {
         font-size: 3vw;
     }
 
-    h2{
+    h2 {
         font-size: 6.518vw;
     }
-    h3{
+
+    h3 {
         font-size: 6.41vw;
+    }
+
+    h4 {
+        font-size: 5.41vw;
     }
 }

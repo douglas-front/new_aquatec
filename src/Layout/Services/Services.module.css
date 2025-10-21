@@ -89,6 +89,7 @@
     .services {
         margin-top: 9vw;
         padding-bottom: 1vw;
+        overflow: hidden;
     }
 
     .circle {
@@ -96,12 +97,16 @@
         height: 3.771vw;
     }
 
+    .wrapper{
+        gap: 2vw;
+    }
+
     .card {
 
         width: 69.2vw;
         height: 113.4vw;
         border: 0.1vw solid var(--color-blue);
-        border-radius: 0.781vw;
+        border-radius: 2.781vw;
 
         padding: 1.938vw;
 
