@@ -1,0 +1,18 @@
+.button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    z-index: 99;
+}
+
+.button img {
+    width: 10vw;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .button img {
+        width: 25vw;
+    }
+}

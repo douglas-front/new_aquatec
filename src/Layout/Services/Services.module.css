@@ -4,6 +4,12 @@
     margin-top: 2vw;
 }
 
+.services img{
+   margin-top: 3vw;
+   width: 30vw;
+   margin-left: 30vw;
+}
+
 .circle {
     width: 1.771vw;
     height: 1.771vw;
@@ -90,6 +96,11 @@
         margin-top: 9vw;
         padding-bottom: 1vw;
         overflow: hidden;
+    }
+
+    .services img{
+        width: 70vw;
+        margin-left: 14vw;
     }
 
     .circle {
