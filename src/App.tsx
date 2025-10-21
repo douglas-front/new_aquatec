@@ -1,5 +1,5 @@
 import Cursor from "./components/Cursor/Cursor"
-import WhatsappButton from "./components/whatsappButton/whatsappButton"
+import ButtonWhatsapp from "./components/whatsappButton/ButtonWhatsapp"
 import About from "./Layout/About/About"
 import CallForm from "./Layout/CallForm/CallForm"
 import Footer from "./Layout/Footer/Footer"
@@ -14,7 +14,7 @@ function App() {
       <Cursor />
       <Nav />
       <main>
-        <WhatsappButton />
+        <ButtonWhatsapp />
         <Hero />
         <Services />
         <About />
