@@ -30,7 +30,7 @@ export default function Nav() {
 
     return (
         <header className={styles.header}>
-            <img  loading='lazy' src="/logo.png" alt="Logo Aquatec" />
+            <img   src="/logo.png" alt="Logo Aquatec" />
 
             <button
                 onClick={() => { handleMenu(); animateNav() }}

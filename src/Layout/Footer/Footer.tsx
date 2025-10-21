@@ -84,7 +84,7 @@ export default function Footer() {
                                 href="#services"
                                 onClick={e => { e.preventDefault(); scrollToSection('#services'); }}
                             >
-                                <span>Serviços</span>
+                                Serviços
                             </a>
                         </li>
                         <li>
@@ -92,7 +92,7 @@ export default function Footer() {
                                 href="#about"
                                 onClick={e => { e.preventDefault(); scrollToSection('#about'); }}
                             >
-                                <span>Sobre</span>
+                                Sobre
                             </a>
                         </li>
                         <li>
@@ -100,7 +100,7 @@ export default function Footer() {
                                 href="#callForm"
                                 onClick={e => { e.preventDefault(); scrollToSection('#callForm'); }}
                             >
-                                <span>Fale Conosco</span>
+                                Fale Conosco
                             </a>
                         </li>
                     </ul>

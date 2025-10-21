@@ -36,7 +36,7 @@ export default function Hero() {
 
         ScrollTrigger.create({
             trigger: `.${styles.rectangleBlue}`,
-            start: '-20% 0%',
+            start: window.innerWidth==768? '-20% 0%' : '-20% 20%',
             end: '100% 0%',
             scrub: true,
             onEnter: () => {

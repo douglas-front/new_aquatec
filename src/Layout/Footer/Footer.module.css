@@ -1,4 +1,4 @@
-.footer{
+.footer {
   background-color: var(--color-white);
 }
 
@@ -17,7 +17,7 @@
   margin-top: 7vw;
 }
 
-.wrapper{
+.wrapper {
   padding-top: 7.708vw;
 
   display: flex;
@@ -25,27 +25,50 @@
   width: 56.563vw;
 }
 
-.wrapper ul{
+.wrapper ul {
   list-style: none;
 }
 
-.wrapper ul li{
+.wrapper ul li {
   cursor: pointer;
   color: var(--color-blue);
 
 }
 
-.wrapper ul li:first-of-type{
+.wrapper ul li:first-of-type {
   margin-top: 0.5vw;
 }
 
-.wrapper ul{
+.wrapper ul {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
 }
 
-.wrapper address a{
+.wrapper address a {
   font-style: normal;
   color: var(--color-blue);
+}
+
+@media screen and (max-width: 768px) {
+
+  .footer{
+    overflow: hidden;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 14vw;
+  }
+
+  .wrapper ul {
+    gap: 3vw;
+  }
+
+  .wrapper nav ul li a,
+  .wrapper address ul li a {
+    font-style: normal;
+    color: var(--color-blue);
+    font-size: 3.5vw;
+  }
 }

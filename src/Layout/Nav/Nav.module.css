@@ -127,18 +127,18 @@
     .nav {
         top: 12.515vw;
         right: 2.302vw;
-        width: 50.052vw;
-        height: 50.99vw;
+        width: 80.052vw;
+        height: 80.99vw;
     }
 
     .nav ul li span {
-        font-size: 3.875vw;
+        font-size: 6.875vw;
     }
 
     .nav ul {
-        padding: 5.604vw;
+        padding: 9vw 5.604vw;
 
-        gap: 4.563vw;
+        gap: 9.563vw;
     }
 
     .nav ul li span::after {

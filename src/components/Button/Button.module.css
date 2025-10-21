@@ -30,14 +30,14 @@
 
 @media screen and (max-width: 500px) {
     .button {
-        width: 65.844vw;
-        height: 7.564vw;
+        width: 70.844vw;
+        height: 8.564vw;
         font-size: 2.48vw;
-        border-radius: 0.8vw;
-        padding-inline: 1.99vw;
+        border-radius: 1.5vw;
+        padding-inline: 2.99vw;
 
 
-        gap: 2.296vw;
+        gap: 4.296vw;
     }
 
     .line {
